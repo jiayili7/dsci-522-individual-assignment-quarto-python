@@ -1,8 +1,12 @@
 ---
 title: "DSCI 310: Historical Horse Population in Canada"
 author: "Tiffany Timbers & Jordan Bourak"
-format: 
+format:
   html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+  pdf:
     toc: true
     toc-depth: 2
     number-sections: true
@@ -34,15 +38,16 @@ The Python programming language [@Python]
 and the following Python packages were used to perform the analysis: 
 pandas [@pandas], altair [@altair], click [@click], 
 as well as Quarto [@Allaire_Quarto_2022]. 
-*Note: this report is adapted from Timbers (2020).* 
+*Note: this report is adapted from @ttimbers-horses..* 
 
 # Results
 ```{python}
 #| echo: false
 #| label: fig-horse-population
 #| fig-cap: "Horse populations for all provinces in Canada from 1906 - 1972."
+from IPython.display import Image
+Image(filename="../results/horse_pops_plot.png")
 ```
-![](../results/horse_pops_plot.png)
 
 
 We can see from @fig-horse-population that Ontario, Saskatchewan and Alberta 
@@ -80,13 +85,10 @@ Additionally, note that in @tbl-sd we consider the sample standard deviation of 
 #| label: fig-largest-sd
 #| fig-cap: "Horse populations for the province with the largest standard deviation"
 #| fig-width: 60%
+from IPython.display import Image
+Image(filename="../results/horse_pops_plot_largest_sd.png")
 ```
 
-![](../results/horse_pops_plot_largest_sd.png)
-
-
-In @fig-largest-sd we zoom in and look at the province of`{python} Markdown(largest_sd)`, which had the largest spread of values in terms of standard deviation.
-
-
+In @fig-largest-sd we zoom in and look at the province of `{python} Markdown(largest_sd)`, which had the largest spread of values in terms of standard deviation.
 
 # References
